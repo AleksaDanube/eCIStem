@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>eCIStem</title>
+	<meta charset="utf-8" />
+	{% load static %}
+	<!--<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+
+
+	<!-- DOCUMENTATION NAVBAR -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+		<a class="navbar-brand" href="http://www.asaflevylab.com/#"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+		<!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="http://127.0.0.1:8000/">Home </a>
+			</div> <!-- /.navbar-nav, left-hand content -->
+			<div class="navbar-nav ml-auto">
+				<!-- SEARCH BAR -->
+				<form class="form-inline" action="/operonsearch" method="get">
+					<input class="form-control mr-sm-2" name="q" type="text" placeholder="Operon ID" aria-label="Search">
+					<button class="btn btn-outline my-2 my-sm-0" type="submit" style="color:green">SEARCH </button>
+				</form>
+			</div> <!-- /.navbar-nav, right-hand content -->
+		</div> <!-- /.navbar-collapse -->
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			 <div class="col-sm-12">
+				 <br>
+				 <center>
+						<img src="{% static 'ecis_web_first_app/static_ims/eCIStem-01.png' %}" class="card-img-top" style='max-height:270px; max-width:750px;' alt="Responsive image">
+
+				  </center>
+			  </div>
+		</div><hr>
+
+		 <div class="col-sm-12">
+			 	{% if operons_list %}
+					{% for entry in operons_list %}
+							<div class="card">
+								<div class="card-body">
+									<div class="alert alert-dark" role="alert">
+										<a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> [{{ entry.index_ID }}] Operon ID: {{ entry.operon_ID }} </h5></a>
+							  	</div>
+								</div>
+						 		<img src="{% static entry.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt={{entry.operon_IM}}>
+
+							</div>
+					{% endfor %}
+				{% else %}
+					<p>No Records. Table Not Created.</p>
+				{% endif %}
+
+				<a href="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}" download>
+					<img src="https://cdn2.iconfinder.com/data/icons/flat-file-types-1-1/300/icon_file-CSV_plano-512.png" alt="download csv" width="5%" height="5%">
+				</a>
+
+				<form method="get" action="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}">
+   				<button type="submit"  class="btn btn-secondary" >Download Ecis DB!</button>
+				</form>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<br>
+						<center>
+<nav aria-label="...">
+	<ul class="pagination pagination-sm">
+		<li class="page-item">
+				<a class="page-link" href="{% url 'ecis_web_first_app:header10' 301 330 %}" tabindex="-1" aria-disabled="true"><=</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header0' 1 30 %}">1</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header1' 31 60 %}">2</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header2' 61 90 %}">3</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header3' 91 120 %}">4</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header4' 121 150 %}">5</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header5' 151 180 %}">6</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header6' 181 210 %}">7</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header7' 211 240 %}">8</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header8' 241 270 %}">9</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header9' 271 300 %}">10</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header10' 301 330 %}">11</a></li>
+		<li class="page-item active" aria-current="page"><span class="page-link">12<span class="sr-only">(current)</span></span></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header12' 361 390 %}">13</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header13' 391 420 %}">14</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header14' 421 450 %}">15</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header15' 451 480 %}">16</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header16' 481 510 %}">17</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header17' 511 540 %}">18</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header18' 541 570 %}">19</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header19' 571 600 %}">20</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header20' 601 630 %}">21</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header21' 631 660 %}">22</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header22' 661 690 %}">23</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header23' 691 720 %}">24</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header24' 721 750 %}">25</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header25' 751 780 %}">26</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header26' 781 810 %}">27</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header27' 811 840 %}">28</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header28' 841 870 %}">29</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header29' 871 900 %}">30</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header30' 901 930 %}">31</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header31' 931 960 %}">32</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header32' 961 990 %}">33</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header33' 991 1020 %}">34</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header34' 1021 1050 %}">35</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header35' 1051 1080 %}">36</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header36' 1081 1110 %}">37</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header37' 1111 1140 %}">38</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header38' 1141 1170 %}">39</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header39' 1171 1200 %}">40</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header40' 1201 1230 %}">41</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header41' 1231 1260 %}">42</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header42' 1261 1290 %}">43</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header43' 1291 1320 %}">44</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header44' 1321 1350 %}">45</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header45' 1351 1380 %}">46</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header46' 1381 1410 %}">47</a></li>
+		<li class="page-item"><a class="page-link" href="{% url 'ecis_web_first_app:header47' 1411 1440 %}">48</a></li>
+		<li class="page-item">
+			<a class="page-link" href="{% url 'ecis_web_first_app:header12' 361 390 %}">=></a>
+		</li>
+	</ul>
+</nav>						</center>
+					</div>
+			</div><hr>
+	</div>
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="https://il.linkedin.com/in/asaf-levy-b87a7145/" target="blank">LinkedIn</a> | <a href="https://twitter.com/AsafLevyHUJI/" target="blank">Twitter</a> | <a href="https://www.facebook.com/asaf.le" target="blank">Facebook</a></p>
+		</div>
+	</footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,272 @@
+def operon11487(request):
+	opid = Operons.objects.get(operon_ID__exact=11487)
+	genes = EcisDataBase.objects.filter(operon_ID=11487)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11487.html', clust_dict)
+def operon1158(request):
+	opid = Operons.objects.get(operon_ID__exact=1158)
+	genes = EcisDataBase.objects.filter(operon_ID=1158)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon1158.html', clust_dict)
+def operon11600(request):
+	opid = Operons.objects.get(operon_ID__exact=11600)
+	genes = EcisDataBase.objects.filter(operon_ID=11600)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11600.html', clust_dict)
+def operon11601(request):
+	opid = Operons.objects.get(operon_ID__exact=11601)
+	genes = EcisDataBase.objects.filter(operon_ID=11601)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11601.html', clust_dict)
+def operon11637(request):
+	opid = Operons.objects.get(operon_ID__exact=11637)
+	genes = EcisDataBase.objects.filter(operon_ID=11637)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11637.html', clust_dict)
+def operon11640(request):
+	opid = Operons.objects.get(operon_ID__exact=11640)
+	genes = EcisDataBase.objects.filter(operon_ID=11640)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11640.html', clust_dict)
+def operon11641(request):
+	opid = Operons.objects.get(operon_ID__exact=11641)
+	genes = EcisDataBase.objects.filter(operon_ID=11641)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11641.html', clust_dict)
+def operon11663(request):
+	opid = Operons.objects.get(operon_ID__exact=11663)
+	genes = EcisDataBase.objects.filter(operon_ID=11663)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11663.html', clust_dict)
+def operon11674(request):
+	opid = Operons.objects.get(operon_ID__exact=11674)
+	genes = EcisDataBase.objects.filter(operon_ID=11674)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11674.html', clust_dict)
+def operon11678(request):
+	opid = Operons.objects.get(operon_ID__exact=11678)
+	genes = EcisDataBase.objects.filter(operon_ID=11678)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11678.html', clust_dict)
+def operon11681(request):
+	opid = Operons.objects.get(operon_ID__exact=11681)
+	genes = EcisDataBase.objects.filter(operon_ID=11681)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11681.html', clust_dict)
+def operon11719(request):
+	opid = Operons.objects.get(operon_ID__exact=11719)
+	genes = EcisDataBase.objects.filter(operon_ID=11719)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11719.html', clust_dict)
+def operon11798(request):
+	opid = Operons.objects.get(operon_ID__exact=11798)
+	genes = EcisDataBase.objects.filter(operon_ID=11798)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11798.html', clust_dict)
+def operon11840(request):
+	opid = Operons.objects.get(operon_ID__exact=11840)
+	genes = EcisDataBase.objects.filter(operon_ID=11840)
+	species = Species.objects.get(genome_ID_x=genes[0]['genome_ID_x'])
+	clust_dict = {"genes_list": genes, "species_list":species, "opid":opid}
+	return render(request, 'ecis_web_first_app/operon11840.html', clust_dict)
+def header0(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header0.html', operons_dict)
+def header1(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header1.html', operons_dict)
+def header2(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header2.html', operons_dict)
+def header3(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header3.html', operons_dict)
+def header4(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header4.html', operons_dict)
+def header5(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header5.html', operons_dict)
+def header6(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header6.html', operons_dict)
+def header7(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header7.html', operons_dict)
+def header8(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header8.html', operons_dict)
+def header9(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header9.html', operons_dict)
+def header10(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header10.html', operons_dict)
+def header11(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header11.html', operons_dict)
+def header12(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header12.html', operons_dict)
+def header13(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header13.html', operons_dict)
+def header14(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header14.html', operons_dict)
+def header15(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header15.html', operons_dict)
+def header16(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header16.html', operons_dict)
+def header17(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header17.html', operons_dict)
+def header18(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header18.html', operons_dict)
+def header19(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header19.html', operons_dict)
+def header20(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header20.html', operons_dict)
+def header21(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header21.html', operons_dict)
+def header22(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header22.html', operons_dict)
+def header23(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header23.html', operons_dict)
+def header24(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header24.html', operons_dict)
+def header25(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header25.html', operons_dict)
+def header26(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header26.html', operons_dict)
+def header27(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header27.html', operons_dict)
+def header28(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header28.html', operons_dict)
+def header29(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header29.html', operons_dict)
+def header30(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header30.html', operons_dict)
+def header31(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header31.html', operons_dict)
+def header32(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header32.html', operons_dict)
+def header33(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header33.html', operons_dict)
+def header34(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header34.html', operons_dict)
+def header35(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header35.html', operons_dict)
+def header36(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header36.html', operons_dict)
+def header37(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header37.html', operons_dict)
+def header38(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header38.html', operons_dict)
+def header39(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header39.html', operons_dict)
+def header40(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header40.html', operons_dict)
+def header41(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header41.html', operons_dict)
+def header42(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header42.html', operons_dict)
+def header43(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header43.html', operons_dict)
+def header44(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header44.html', operons_dict)
+def header45(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header45.html', operons_dict)
+def header46(request, min, max):
+	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	operons_dict = {'operons_list':opids}
+	return render(request, 'ecis_web_first_app/header46.html', operons_dict)

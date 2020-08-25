@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OPERON 11601</title>
+    <meta charset="utf-8" />
+  	{% load static %}
+  	<!--<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "ecis_web_first_app/css/mystyle.css" %}"/>
+  	<style type="text/css">
+  		html,
+  		body {
+  		  height:100%
+  		}
+  	</style>
+
+  </head>
+  <body class="body" style="background-color:#f6f6f6">
+
+      	<!-- DOCUMENTATION NAVBAR -->
+
+      	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+          <a class="navbar-brand" href="http://www.asaflevylab.com/#"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- This is the actual code that creates the "hamburger icon" -->
+          <!-- The data-target grabs ids to put into the icon -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-nav">
+
+              <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+              <a class="nav-item nav-link active" href="#">Home</a>
+              <a class="nav-item nav-link active" href="#">eCIS explained</a>
+
+              <!-- DROPDOWN MENU -->
+
+            </div> <!-- /.navbar-nav, left-hand content -->
+
+          </div> <!-- /.navbar-collapse -->
+        </nav>
+
+  	<div class="container-fluid" style="min-height:95%; ">
+  		<div class="row">
+  			  <div class="col-sm-12">
+  				  <br>
+  				  <center>
+  				  <h1>eCIS database 2020</h1>
+  				  </center>
+  			  </div>
+  		</div><hr>
+      <div class="col-sm-12">
+        <div class="card">
+  			  <div class="card-body">
+  				<p class="card-text"><b>speciesName:</b> <i>{{ specs_list.species }}</i></p>
+  			  </div>
+          </div><hr>
+
+
+          <table class="table table-striped">
+            {% if opids_list %}
+                <thead>
+                    <tr>
+                      <th scope="col">operon id</th>
+                      <!-- <th scope="col">genome id</th>
+                      <th scope="col">phylum</th>
+                      <th scope="col">genus</th>
+                      <th scope="col">strain</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for entry in opids_list %}
+                       <tr>
+                        <td><a href="/operon{{ entry.operon_ID }}"> {{ entry.operon_ID }} </a></td>
+                        <!-- <td>{{ entry.genome_ID_x }}</td>
+                        <td>{{ entry.phylum }}</td>
+                        <td>{{ entry.genus }}</td>
+                        <td>{{ entry.strain }}</td> -->
+                      </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            {% else %}
+              <p>No Records. Table Not Created.</p>
+            {% endif %}
+          </div>
+      </div>
+    </div>
+  </body>

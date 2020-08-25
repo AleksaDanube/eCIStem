@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>eCIStem</title>
+	<meta charset="utf-8" />
+	{% load static %}
+	<!--<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+
+
+	<!-- DOCUMENTATION NAVBAR -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+		<a class="navbar-brand" href="http://www.asaflevylab.com/#"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+		<!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="http://127.0.0.1:8000/">Home </a>
+			</div> <!-- /.navbar-nav, left-hand content -->
+			<div class="navbar-nav ml-auto">
+				<!-- SEARCH BAR -->
+				<form class="form-inline" action="/operonsearch" method="get">
+					<input class="form-control mr-sm-2" name="q" type="text" placeholder="Operon ID" aria-label="Search">
+					<button class="btn btn-outline my-2 my-sm-0" type="submit" style="color:green">SEARCH </button>
+				</form>
+			</div> <!-- /.navbar-nav, right-hand content -->
+		</div> <!-- /.navbar-collapse -->
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			 <div class="col-sm-12">
+				 <br>
+				 <center>
+						<img src="{% static 'ecis_web_first_app/static_ims/eCIStem-01.png' %}" class="card-img-top" style='max-height:270px; max-width:750px;' alt="Responsive image">
+
+				  </center>
+			  </div>
+		</div><hr>
+
+		 <div class="col-sm-12">
+			 	{% if operons_list %}
+					{% for entry in operons_list %}
+							<div class="card">
+								<div class="card-body">
+									<div class="alert alert-dark" role="alert">
+										<a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> [{{ entry.index_ID }}] Operon ID: {{ entry.operon_ID }} </h5></a>
+							  	</div>
+								</div>
+						 		<img src="{% static entry.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt={{entry.operon_IM}}>
+
+							</div>
+					{% endfor %}
+				{% else %}
+					<p>No Records. Table Not Created.</p>
+				{% endif %}
+
+				<a href="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}" download>
+					<img src="https://cdn2.iconfinder.com/data/icons/flat-file-types-1-1/300/icon_file-CSV_plano-512.png" alt="download csv" width="5%" height="5%">
+				</a>
+
+				<form method="get" action="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}">
+   				<button type="submit"  class="btn btn-secondary" >Download Ecis DB!</button>
+				</form>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<br>
+						<center>
+						"TEXT_TO_SEARCH"
+						</center>
+					</div>
+			</div><hr>
+	</div>
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="https://il.linkedin.com/in/asaf-levy-b87a7145/" target="blank">LinkedIn</a> | <a href="https://twitter.com/AsafLevyHUJI/" target="blank">Twitter</a> | <a href="https://www.facebook.com/asaf.le" target="blank">Facebook</a></p>
+		</div>
+	</footer>
+
+</body>
+
+
+</html>

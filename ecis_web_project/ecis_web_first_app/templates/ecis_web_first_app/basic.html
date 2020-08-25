@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>eCIStem</title>
+	<meta charset="utf-8" />
+	{% load static %}
+	<!--<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>-->
+	<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+
+</head>
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-12">
+				  <br>
+				  <center>
+				  <h1>ECIs database by Alex Geller and Asaf Levi</h1>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-1">
+		  <br>
+
+		  <br>
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-6">
+
+			<div class="card mb-3" style="max-width: 1000px;">
+			   <div class="row no-gutters">
+					<div class="col-md-4">
+						<img src="{% static 'ecis_web_first_app/img/profile.jfif' %}" class="card-img" style = 'max-height:300px;max-width:300px;' alt="...">
+					</div>
+				<div class="col-md-8">
+				  <div class="card-body">
+					<h5 class="card-title">contact info</h5>
+					{% block content %}
+						{% for c in content%}
+							<p>{{c}}</p>
+						{% endfor %}
+					{% endblock %}
+				  </div>
+				</div>
+			   </div>
+			</div>
+		   </div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="https://www.linkedin.com/" target="blank">LinkedIn</a> | <a href="https://twitter.com/explore" target="blank">Twitter</a> | <a href="https://he.wikipedia.org/wiki/Google%2B" target="blank">Google+</a></p>
+		</div>
+	</footer>
+</body>

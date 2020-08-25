@@ -1,0 +1,635 @@
+def Cluster143(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 143")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 143")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20143.html', clust_dict)
+def Cluster15(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 15")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 15")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2015.html', clust_dict)
+def Cluster139(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 139")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 139")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20139.html', clust_dict)
+def Cluster10(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 10")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 10")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2010.html', clust_dict)
+def NA(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="NA")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="NA")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/NA.html', clust_dict)
+def Cluster109(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 109")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 109")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20109.html', clust_dict)
+def Cluster140(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 140")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 140")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20140.html', clust_dict)
+def Cluster190(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 190")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 190")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20190.html', clust_dict)
+def Cluster742(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 742")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 742")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20742.html', clust_dict)
+def Cluster1990(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1990")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1990")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201990.html', clust_dict)
+def Cluster6451(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6451")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6451")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206451.html', clust_dict)
+def Cluster13(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 13")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 13")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2013.html', clust_dict)
+def Cluster1047(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1047")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1047")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201047.html', clust_dict)
+def Cluster1073(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1073")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1073")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201073.html', clust_dict)
+def Cluster432(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 432")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 432")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20432.html', clust_dict)
+def Cluster380(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 380")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 380")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20380.html', clust_dict)
+def Cluster575(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 575")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 575")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20575.html', clust_dict)
+def Cluster746(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 746")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 746")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20746.html', clust_dict)
+def Cluster726(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 726")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 726")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20726.html', clust_dict)
+def Cluster795(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 795")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 795")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20795.html', clust_dict)
+def Cluster679(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 679")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 679")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20679.html', clust_dict)
+def Cluster267(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 267")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 267")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20267.html', clust_dict)
+def Cluster261(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 261")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 261")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20261.html', clust_dict)
+def Cluster234(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 234")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 234")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20234.html', clust_dict)
+def Cluster254(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 254")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 254")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20254.html', clust_dict)
+def Cluster12(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 12")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 12")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2012.html', clust_dict)
+def Cluster175(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 175")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 175")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20175.html', clust_dict)
+def Cluster1(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201.html', clust_dict)
+def Cluster409(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 409")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 409")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20409.html', clust_dict)
+def Cluster2(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202.html', clust_dict)
+def Cluster44(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 44")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 44")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2044.html', clust_dict)
+def Cluster61(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 61")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 61")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2061.html', clust_dict)
+def Cluster33(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 33")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 33")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2033.html', clust_dict)
+def Cluster1173(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1173")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1173")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201173.html', clust_dict)
+def Cluster5085(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5085")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5085")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205085.html', clust_dict)
+def Cluster5(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205.html', clust_dict)
+def Cluster67(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 67")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 67")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2067.html', clust_dict)
+def Cluster3307(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3307")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3307")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203307.html', clust_dict)
+def Cluster2089(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2089")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2089")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202089.html', clust_dict)
+def Cluster1958(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1958")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1958")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201958.html', clust_dict)
+def Cluster833(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 833")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 833")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20833.html', clust_dict)
+def Cluster751(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 751")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 751")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20751.html', clust_dict)
+def Cluster4368(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4368")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4368")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204368.html', clust_dict)
+def Cluster30(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 30")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 30")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2030.html', clust_dict)
+def Cluster53(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 53")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 53")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2053.html', clust_dict)
+def Cluster55(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 55")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 55")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2055.html', clust_dict)
+def Cluster105(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 105")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 105")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20105.html', clust_dict)
+def Cluster167(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 167")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 167")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20167.html', clust_dict)
+def Cluster36(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 36")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 36")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2036.html', clust_dict)
+def Cluster1044(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1044")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1044")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201044.html', clust_dict)
+def Cluster940(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 940")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 940")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20940.html', clust_dict)
+def Cluster523(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 523")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 523")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20523.html', clust_dict)
+def Cluster392(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 392")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 392")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20392.html', clust_dict)
+def Cluster675(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 675")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 675")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20675.html', clust_dict)
+def Cluster113(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 113")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 113")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20113.html', clust_dict)
+def Cluster894(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 894")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 894")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20894.html', clust_dict)
+def Cluster1207(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1207")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1207")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201207.html', clust_dict)
+def Cluster1236(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1236")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1236")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201236.html', clust_dict)
+def Cluster1068(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1068")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1068")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201068.html', clust_dict)
+def Cluster3170(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3170")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3170")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203170.html', clust_dict)
+def Cluster5147(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5147")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5147")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205147.html', clust_dict)
+def Cluster5758(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5758")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5758")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205758.html', clust_dict)
+def Cluster155(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 155")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 155")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20155.html', clust_dict)
+def Cluster3626(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3626")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3626")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203626.html', clust_dict)
+def Cluster1606(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1606")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1606")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201606.html', clust_dict)
+def Cluster214(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 214")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 214")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20214.html', clust_dict)
+def Cluster5970(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5970")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5970")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205970.html', clust_dict)
+def Cluster7193(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 7193")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 7193")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%207193.html', clust_dict)
+def Cluster6645(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6645")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6645")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206645.html', clust_dict)
+def Cluster3186(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3186")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3186")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203186.html', clust_dict)
+def Cluster6272(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6272")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6272")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206272.html', clust_dict)
+def Cluster1247(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1247")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1247")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201247.html', clust_dict)
+def Cluster1226(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1226")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1226")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201226.html', clust_dict)
+def Cluster6599(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6599")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6599")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206599.html', clust_dict)
+def Cluster1292(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1292")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1292")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201292.html', clust_dict)
+def Cluster1099(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1099")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1099")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201099.html', clust_dict)
+def Cluster165(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 165")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 165")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20165.html', clust_dict)
+def Cluster864(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 864")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 864")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20864.html', clust_dict)
+def Cluster860(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 860")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 860")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20860.html', clust_dict)
+def Cluster1072(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1072")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1072")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201072.html', clust_dict)
+def Cluster968(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 968")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 968")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20968.html', clust_dict)
+def Cluster850(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 850")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 850")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20850.html', clust_dict)
+def Cluster1547(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1547")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1547")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201547.html', clust_dict)
+def Cluster57(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 57")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 57")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2057.html', clust_dict)
+def Cluster2188(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2188")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2188")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202188.html', clust_dict)
+def Cluster2147(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2147")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2147")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202147.html', clust_dict)
+def Cluster1847(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1847")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1847")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201847.html', clust_dict)
+def Cluster4655(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4655")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4655")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204655.html', clust_dict)
+def Cluster1821(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1821")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1821")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201821.html', clust_dict)
+def Cluster1601(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1601")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1601")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201601.html', clust_dict)
+def Cluster1182(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1182")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1182")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201182.html', clust_dict)
+def Cluster127(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 127")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 127")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20127.html', clust_dict)
+def Cluster1108(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1108")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1108")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201108.html', clust_dict)
+def Cluster59(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 59")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 59")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2059.html', clust_dict)
+def Cluster11(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 11")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 11")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2011.html', clust_dict)
+def Cluster1127(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1127")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1127")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201127.html', clust_dict)
+def Cluster4599(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4599")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4599")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204599.html', clust_dict)
+def Cluster4387(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4387")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4387")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204387.html', clust_dict)
+def Cluster16(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 16")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 16")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2016.html', clust_dict)
+def Cluster2765(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2765")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2765")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202765.html', clust_dict)
+def Cluster2172(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2172")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2172")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202172.html', clust_dict)
+def Cluster1676(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1676")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1676")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201676.html', clust_dict)
+def Cluster6396(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6396")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6396")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206396.html', clust_dict)
+def Cluster3653(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3653")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3653")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203653.html', clust_dict)
+def Cluster5005(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5005")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5005")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205005.html', clust_dict)
+def Cluster3024(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3024")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3024")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203024.html', clust_dict)
+def Cluster2803(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2803")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2803")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202803.html', clust_dict)
+def Cluster2755(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 2755")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 2755")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%202755.html', clust_dict)
+def Cluster4419(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4419")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4419")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204419.html', clust_dict)
+def Cluster5908(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 5908")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 5908")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%205908.html', clust_dict)
+def Cluster0(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 0")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 0")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%200.html', clust_dict)
+def Cluster596(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 596")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 596")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20596.html', clust_dict)
+def Cluster6628(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6628")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6628")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206628.html', clust_dict)
+def Cluster454(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 454")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 454")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20454.html', clust_dict)
+def Cluster6918(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 6918")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 6918")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%206918.html', clust_dict)
+def Cluster1370(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1370")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1370")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201370.html', clust_dict)
+def Cluster3306(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3306")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3306")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203306.html', clust_dict)
+def Cluster1194(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1194")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1194")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201194.html', clust_dict)
+def Cluster1005(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1005")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1005")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201005.html', clust_dict)
+def Cluster1238(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1238")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1238")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201238.html', clust_dict)
+def Cluster1046(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1046")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1046")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201046.html', clust_dict)
+def Cluster1218(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1218")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1218")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201218.html', clust_dict)
+def Cluster1126(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 1126")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 1126")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%201126.html', clust_dict)
+def Cluster22(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 22")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 22")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%2022.html', clust_dict)
+def Cluster4763(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 4763")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 4763")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%204763.html', clust_dict)
+def Cluster3460(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 3460")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 3460")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%203460.html', clust_dict)
+def Cluster779(request):
+	clst = Clust40PG.objects.get(clust40pg__exact="Cluster 779")
+	genes = EcisDataBase.objects.filter(clust40pg__exact="Cluster 779")
+	clust_dict = {"genes_list_withing_clust": genes, "clst40":clst}
+	return render(request, 'ecis_web_first_app/Cluster%20779.html', clust_dict)
