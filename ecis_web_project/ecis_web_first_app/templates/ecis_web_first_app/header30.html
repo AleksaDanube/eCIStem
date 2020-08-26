@@ -5,8 +5,6 @@
 	<title>eCIStem</title>
 	<meta charset="utf-8" />
 	{% load static %}
-	<!--<link rel="stylesheet" href="{% static 'ecis_web_first_app/css/bootstrap.min.css' %}" type = "text/css"/>-->
-	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
@@ -21,18 +19,11 @@
 </head>
 
 <body class="body" style="background-color:#f6f6f6">
-
-
-	<!-- DOCUMENTATION NAVBAR -->
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
 		<a class="navbar-brand" href="http://www.asaflevylab.com/#"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
-
 		<!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<div class="navbar-nav">
@@ -54,7 +45,6 @@
 				 <br>
 				 <center>
 						<img src="{% static 'ecis_web_first_app/static_ims/eCIStem-01.png' %}" class="card-img-top" style='max-height:270px; max-width:750px;' alt="Responsive image">
-
 				  </center>
 			  </div>
 		</div><hr>
@@ -69,7 +59,6 @@
 							  	</div>
 								</div>
 						 		<img src="{% static entry.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt={{entry.operon_IM}}>
-
 							</div>
 					{% endfor %}
 				{% else %}
@@ -86,13 +75,11 @@
 			</div>
 
 
-
-			<div class="row">
-				<div class="col-sm-12">
-					<br>
-						<center>
-<nav aria-label="...">
-	<ul class="pagination pagination-sm">
+			 <div class="col-sm-12">
+				 <nav aria-label="...">
+					 <div class="col-12">
+						 <ul class="pagination pagination-sm">
+							 <div class="row">
 		<li class="page-item">
 				<a class="page-link" href="{% url 'ecis_web_first_app:header29' 871 900 %}" tabindex="-1" aria-disabled="true"><=</a>
 		</li>
@@ -147,11 +134,14 @@
 		<li class="page-item">
 			<a class="page-link" href="{% url 'ecis_web_first_app:header31' 931 960 %}">=></a>
 		</li>
+</div>
+</div>
 	</ul>
-</nav>						</center>
-					</div>
-			</div><hr>
-	</div>
+</nav>				
+				</div>
+
+				</div>
+
 
 	<footer>
 		<div class="container-fluid" style='margin-left:15px'>
