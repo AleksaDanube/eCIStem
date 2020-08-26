@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Clust40PG,Operons,Species,EcisDataBase,PfamDb
+from django.core.paginator import Paginator
 from PIL import Image
 import shutil
 # Create your views here.
@@ -222,24 +223,15 @@ def pfams_det(request, gene):
 	return render(request,'ecis_web_first_app/pfams_det.html',pfams_dict)
 
 def PhylumSearch(request, phylum_name):
-	genoms = []
-	search_term = ''
-	opid = []
-	#search_term = request.GET.get('q')
-	#print('search_term is ' +search_term)
 	phyls = Species.objects.filter(phylum__exact = phylum_name)
-	#print(phyls.values('phylum'))
 	gmid_values = phyls.values('genome_ID_x')
-	#print(phyls_values)
-	for item in gmid_values:
-		genoms.extend(EcisDataBase.objects.filter(genome_ID_x=item['genome_ID_x']))
-	print(genoms)
-	for item in genoms:
-		opid.extend(Operons.objects.filter(operon_ID__exact=item.operon_ID))
-
-	#print(opid)
-	phyls_dict = {"phyls_list":phyls[0], "opids_list":set(opid)}
-	return render(request, 'ecis_web_first_app/phylumsearch.html', phyls_dict)
+	genoms = EcisDataBase.objects.filter(genome_ID_x__in=gmid_values)
+	opid_list =list(set(genoms.values_list('operon_ID',flat=True)))
+	operons_list = Operons.objects.filter(operon_ID__in = opid_list)
+	paginator = Paginator(operons_list, 25) # Show 25 contacts per page.
+	page_number = request.GET.get('page')
+	page_obj = paginator.get_page(page_number)
+	return render(request, 'ecis_web_first_app/phylumsearch.html',  {"phyls_list":phyls[0],'page_obj': page_obj})
 
 def operonsearch(request):
 	search_term = request.GET.get('q')
