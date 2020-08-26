@@ -15,39 +15,18 @@
   		  height:100%
   		}
   	</style>
-
   </head>
   <body class="body" style="background-color:#f6f6f6">
-
-      	<!-- DOCUMENTATION NAVBAR -->
-
       	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
           <a class="navbar-brand" href="http://www.asaflevylab.com/#" data-toggle="tooltip" data-placement="top" title="Levy Lab Huji"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
-
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <!-- This is the actual code that creates the "hamburger icon" -->
-          <!-- The data-target grabs ids to put into the icon -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-
           <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-nav">
-
-              <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
               <a class="nav-item nav-link active" data-toggle="tooltip" data-placement="top" title="Home page for eCIStem" href="/">Home</a>
-
-
-              <!-- DROPDOWN MENU -->
-
             </div> <!-- /.navbar-nav, left-hand content -->
-
-            <!-- STUFF ON THE RIGHT -->
-
-
           </div> <!-- /.navbar-collapse -->
         </nav>
 
@@ -57,35 +36,47 @@
       				 <br>
       				 <center>
       						<img src="{% static 'ecis_web_first_app/static_ims/eCIStem-01.png' %}" class="card-img-top" style='max-height:270px; max-width:750px;' alt="Responsive image">
-
-      				  </center>
+      				 </center>
       			  </div>
-      		</div><hr>
-      <div class="col-sm-12">
-        <div class="card">
-  			  <div class="card-body">
-  				<p class="card-text"><i>{{ phyls_list.phylum }}</i> Operons </p>
-  			  </div>
-          </div><hr>
-
-          {% if opids_list %}
-              {% for entry in opids_list %}
-          <div class="card">
-            <div class="card-body">
+            <div class="col-sm-12">
               <div class="alert alert-dark" role="alert">
-                <a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> Operon ID: {{entry.operon_ID}} </h5></a>
-              </div>
-            <!-- <p class="card-text"><i>Teredinibacter turnerae</i></p> -->
+  				           <i>{{ phyls_list.phylum }}</i> Operons </p>
+  			      </div>
+            </div><hr>
 
-          </div>
-           <img src="{% static entry.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt={{entry.operon_IM}}>
-
-          </div>
-           {% endfor %}
+            {% if page_obj %}
+              {% for entry in page_obj %}
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="alert alert-dark" role="alert">
+                        <a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> Operon ID: {{entry.operon_ID}} </h5></a>
+                      </div>
+                    </div>
+                    <img src="{% static entry.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt={{entry.operon_IM}}>
+                  </div>
+              {% endfor %}
            {% else %}
              <p>No Records. Table Not Created.</p>
-         {% endif %}
+          {% endif %}
+          <div class="col-sm-12">
+
+            <div class="pagination">
+              <span class="step-links">
+                {% if page_obj.has_previous %}
+                  <a href="?page=1">&laquo; first</a>
+                  <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+              <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+              </span>
+
+                {% if page_obj.has_next %}
+                  <a href="?page={{ page_obj.next_page_number }}">next</a>
+                  <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+              {% endif %}
+            </span>
           </div>
+        </div>
       </div>
     </div>
   </body>
