@@ -43,7 +43,7 @@
   				           <i>{{ phyls_list.phylum }}</i> Operons </p>
   			      </div>
             </div><hr>
-
+            <div class="col-sm-12">
             {% if page_obj %}
               {% for entry in page_obj %}
                   <div class="card">
@@ -58,6 +58,8 @@
            {% else %}
              <p>No Records. Table Not Created.</p>
           {% endif %}
+            </div>
+          </div>
           <div class="col-sm-12">
 
             <div class="pagination">
@@ -77,7 +79,7 @@
             </span>
           </div>
         </div>
-      </div>
+
     </div>
   </body>
 </html>
