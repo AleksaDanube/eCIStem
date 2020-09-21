@@ -35,8 +35,8 @@
 			</div> <!-- /.navbar-nav, left-hand content -->
 			<div class="navbar-nav ml-auto">
 				<!-- SEARCH BAR -->
-				<form class="form-inline" action="/operonsearch" method="get">
-					<input class="form-control mr-sm-2" name="q" type="text" placeholder="Operon ID" aria-label="Search">
+				<form class="form-inline" action="/genusearch" method="get">
+					<input class="form-control mr-sm-2" name="q" type="text" placeholder="Genus" aria-label="Search">
 					<button class="btn btn-outline my-2 my-sm-0" type="submit" style="color:green">SEARCH </button>
 				</form>
 
@@ -59,14 +59,33 @@
 							<a class="btn btn-primary btn-lg" href="{% url 'ecis_web_first_app:header0' 1 40 %}" role="button">Take me to the eCIStem!</a>
 							<div class="btn-group" role="group">
 						    <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						      Search by Phylum
+						      Browse by Phylum
 						    </button>
 						    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
 									{% for entry in phylums_list %}
 						      	<a class="dropdown-item" href="{% url 'ecis_web_first_app:phylumsearch' entry %}">{{entry}}</a>
 									{% endfor %}
 						    </div>
+
 						  </div>
+							<div class="btn-group">
+                <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">Browse by Pfam <span class="caret"></span></button>
+                <ul class="dropdown-menu scrollable-menu" role="menu" style = "height:auto;max-height: 500px;overflow-x: hidden;">
+									{% for entry in pfams_list %}
+                    <li><a class="dropdown-item" href="{% url 'ecis_web_first_app:pfamsearch' entry %}">{{entry}}</a></li>
+                     {% endfor %}
+                </ul>
+            </div>
+								<!-- <div class="btn-group" role="group">
+							<button id="btnGroupDrop1" type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							 Browse by Pfam
+						 </button>
+						 <div class="dropdown-menu scrollable-menu" aria-labelledby="btnGroupDrop1">
+							 {% for entry in pfams_list %}
+								 <a class="dropdown-item" href="{% url 'ecis_web_first_app:pfamsearch' entry %}">{{entry}}</a>
+							 {% endfor %}
+						 </div>
+						 	  </div> -->
 						</center>
 					</div>
 
@@ -76,15 +95,20 @@
 							 <h2 class="mb-0">
 								 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
-										 eCIS are &quot;Headless Phage&quot; that <br>Inject Effectors into Cells
+										 The extracellular Contractile Injection System (eCIS)
 								 </button>
 						 	 </h2>
 					 	</div>
 
 				 		<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#landingPageAccordion">
 					 		<div class="card-body">
-								Bacteria employ toxin-translocating secretion systems to exclude bacterial competitors and to infect host cells. Characterization of these systems and the toxins they secrete is important for understanding microbial interactions and virulence in different ecosystems. The extracellular Contractile Injection System (eCIS) is a cell-free toxin delivery particle that evolved from a bacteriophage tail. It is believed to be released from producing cells. eCIS particles in the environment then undergo binding to target cells, contraction, and injection of effectors, which sometimes are toxic. These nanomachines are understudied, and the Levy Lab has taken a broad bioinformatic and experimental approach to study eCIS. By mining genomes in the IMG database, we indentified 1,425 eCIS loci in 1,249 prokaryotic genomes (both Bacteria and Archaea). The publication can be accessed at (....).
-				 			</div>
+							The extracellular contractile injection system (eCIS) is a cell-free protein delivery system that is prevalent in bacteria and archaea but its biological function is poorly understood. The eCIS particle resembles the contractile tail of a T4 bacteriophage and is mostly encoded by an operon of 15-28 genes. This protein complex is 110-120 nm long and includes a baseplate, a sheathed hollow tube that has a needle-like tip (spike) on one side and a cap on the other side, and tail fibers that likely serve to adhere to target cells.</br>
+							<center>
+							<img src="{% static 'ecis_web_first_app/static_ims/ecis_fig.png' %}" style='max-height:650px;'alt="img is missing">
+						</center>
+							</br>
+							eCIS contraction propels the tube out of the sheath, likely enabling the sharp tip to perforate the target cell membrane. In addition to the structural proteins, eCIS particles are associated with effectors, which are proteins that are injected by the particle into target cells upon contraction. These effectors are usually encoded within the 3’ end of the operon. The studied effectors have enzymatic activities in the target cell, most of which lead to cell toxicity. eCIS shares structural similarity with other contractile nanoweapons such as type VI secretion system (T6SS) and R-type pyocins but differs from these by being extracellular and by injecting effectors into the target cell, respectively. Despite the prevalence of eCISs across the microbial world, only a few eCIS loci have been experimentally studied.
+							</div>
 			 			</div>
 		 			</div>
 		 			<div class="card">
@@ -97,25 +121,12 @@
 			 			</div>
 			 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#landingPageAccordion">
 			 				<div class="card-body">
-				 				eCIStem provides visualization of all eCIS operons. The database includes gene annotation, an eCIS operon search option based on taxonomy and gene clusters, and links to additional data from the IMG database (ref). eCIStem also contains ecological and life-style metadata of the eCIS encoding microbe. This valuable information can help researchers study eCIS with regard to its specific ecological functions and to deduce the eCIS target organism. Figure 7 from our publication (ref) presents some of the information held in eCIStem. eCIStem is an expanded version of the recently developed dbeCIS which includes 631 operons (ref). eCIStem provides protein domain data for all eCIS genes, as well as full database download option which will facilitate future bioinformatic analysis of our dataset by other members of the research community. The information held in eCIStem is freely available to users from academic non-profit institutions.
+				 			eCIStem provides visualization of 1,425 eCIS operons within 1,249 bacterial and archaeal genomes. The database includes operon, gene, protein, and protein domain information, as well as ecological and physiological metadata describing the eCIS encoding microbe, such as its natural host. This valuable information can help researchers to study eCIS with regard to its specific ecological functions and to deduce the eCIS target organism. The information held in eCIStem is freely available to users from academic non-profit institutions.
 			 				</div>
 		 				</div>
 	 				</div>
 
- 					<div class="card">
-	 					<div class="card-header" id="headingThree">
-		 					<h2 class="mb-0">
-			 					<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				 						Another interesting info
-			 					</button>
-		 				 </h2>
-			 			</div>
-	 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#landingPageAccordion">
-		 					<div class="card-body">
-								to be added here
-		 					</div>
-	 					</div>
- 					</div>
+
 				</div>
 			</div>
 			<div class="col-sm-2">
@@ -125,7 +136,8 @@
 	</div>
 	<footer>
 		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="https://il.linkedin.com/in/asaf-levy-b87a7145/" target="blank">LinkedIn</a> | <a href="https://twitter.com/AsafLevyHUJI/" target="blank">Twitter</a> | <a href="https://www.facebook.com/asaf.le" target="blank">Facebook</a></p>
+		</br>
+			<p>Free Use to Academic Non-Profit Institutions. Other Users Please Contact Dr. Asaf Levy : alevy at mail.huji.ac.il</p>
 		</div>
 	</footer>
 </body>

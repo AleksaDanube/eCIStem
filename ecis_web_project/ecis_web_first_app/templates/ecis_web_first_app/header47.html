@@ -70,16 +70,22 @@
 					<p>No Records. Table Not Created.</p>
 				{% endif %}
 
-				<a href="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}" download>
+				<!-- <a href="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}" download>
 					<img src="https://cdn2.iconfinder.com/data/icons/flat-file-types-1-1/300/icon_file-CSV_plano-512.png" alt="download csv" width="5%" height="5%">
 				</a>
 
 				<form method="get" action="{% static 'ecis_web_first_app/static_ims/database_for_website_may_2020.csv' %}">
    				<button type="submit"  class="btn btn-secondary" >Download Ecis DB!</button>
-				</form>
+				</form> -->
 			</div>
 
-
+			<br>
+		</br>
+			<form method="get" action="{% static 'ecis_web_first_app/static_ims/eCIStem_plus_taxonomy_and_metadata_and_clusters_again.csv' %}">
+				<button type="submit"  class="btn btn-secondary" >Download eCIStem!</button>
+			</form>
+			<br>
+		</br>
 			 <div class="col-sm-12">
 				 <nav aria-label="...">
 					 <div class="col-12">
@@ -149,9 +155,9 @@
 
 
 	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
+		<!-- <div class="container-fluid" style='margin-left:15px'>
 			<p><a href="https://il.linkedin.com/in/asaf-levy-b87a7145/" target="blank">LinkedIn</a> | <a href="https://twitter.com/AsafLevyHUJI/" target="blank">Twitter</a> | <a href="https://www.facebook.com/asaf.le" target="blank">Facebook</a></p>
-		</div>
+		</div> -->
 	</footer>
 
 </body>

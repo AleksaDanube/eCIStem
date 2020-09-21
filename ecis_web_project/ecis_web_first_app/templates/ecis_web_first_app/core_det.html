@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ clst40.clust40pg }} Group</title>
+    <meta charset="utf-8" />
+  	{% load static %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" >
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static "ecis_web_first_app/css/mystyle.css" %}"/> -->
+    <style type="text/css">
+      html,
+      body {
+        height:100%
+      }
+    </style>
+
+  </head>
+  <body class="body" style="background-color:#f6f6f6">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="http://www.asaflevylab.com/#"><img src="http://www.asaflevylab.com/labimages/levy_logo.png" style='max-height:40px;'alt="Asaf Levy Lab Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/homepage">Home</a>
+    </nav>
+
+  	<div class="container-fluid" style="min-height:95%; ">
+  		<div class="row">
+  			<div class="col-sm-12">
+  				<br>
+            <div class="alert alert-primary" role="alert">
+              <center>
+                    <h2>{{ core }} Group</h2>
+    				  </center>
+            </div>
+  			</div>
+  		</div><hr>
+      <div class="col-sm-12">
+          <table class="table table-striped">
+            {% if genes_list_within_core_whole_id %}
+                <thead>
+                    <tr>
+                      <th scope="col">Local Operon ID</th>
+                      <th scope="col">IMG Gene ID</th>
+                      <th scope="col">Start coordinate</th>
+                      <th scope="col">End coordinate</th>
+                      <th scope="col">Length (aa)</th>
+                      <th scope="col">Scaffold</th>
+                      <th scope="col">Locus Tag</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for entry in genes_list_within_core_whole_id %}
+                       <tr>
+                        <td><a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> {{entry.operon_ID}} </h5></a></td>
+                        <td><a href="https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=fgFindGenes&searchFilter=gene_oid_list&searchTerm={{ entry.gene_id }}&noErrorFlag=1&seqstatus=&domainfilter=&selectType=allIsolates&taxonChoice=allIsolates&data_type=&file=g.gene_oid_list128658">{{ entry.gene_id }}</a></td>
+                        <td>{{ entry.start_coord_x }}</td>
+                        <td>{{ entry.end_coord_x }}</td>
+                        <td>{{ entry.len_aa }}</td>
+                        <td>{{ entry.scaffold }}</td>
+                        <td>{{ entry.locus_tag_x }}</td>
+
+
+                      </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+              {% else %}
+                  <p>No Records. Table Not Created.</p>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
