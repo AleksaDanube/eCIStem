@@ -4,26 +4,35 @@ from .models import Clust40PG,Operons,Species,EcisDataBase,PfamDb
 from django.core.paginator import Paginator
 from PIL import Image
 import shutil
+from django.db.models.functions import Lower
 # Create your views here.
 def homepage(request):
 	phylums_list = []
 	phylums = Species.objects.all()
+	pfams = PfamDb.objects.order_by(Lower('pfam_name').asc())
+
+	pfams_list = pfams.values_list('pfam_name',flat=True)
+	#print(pfams_list)
 	#phylums_dict = {'phylum_list':phylums}
 	#print(list(phylums))
-	phylum_values = phylums.values('phylum')
+	phylums_list = phylums.values_list('phylum',flat=True)
+	#phylum_values = phylums.values('phylum')
 	#print(phylum_values)
-	for item in phylum_values:
+	#for item in phylum_values:
 		#print(item)
-		phylums_list.append(item['phylum'])
+		#phylums_list.append(item['phylum'])
 	#print(set(phylums_list))
 	# for item in genoms:
 	# 	opid.extend(Operons.objects.filter(operon_ID__exact=item.operon_ID))
 	#
 	# #print(opid)
-	phylums_dict = {"phylums_list":set(phylums_list)}
+	print(set(pfams_list))
+	phylums_dict = {"phylums_list":set(phylums_list), "pfams_list":sorted(set(pfams_list))}
 	return render(request, 'ecis_web_first_app/homepage.html', phylums_dict)
 def header0(request, min, max):
 	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	genome_ids = opids.values_list('genome_ID_x')
+	org_list = Species.objects.filter(genome_ID_x__in=genome_ids)
 	operons_dict = {'operons_list':opids}
 	return render(request, 'ecis_web_first_app/header0.html', operons_dict)
 def header1(request, min, max):
@@ -212,7 +221,13 @@ def header46(request, min, max):
 	return render(request, 'ecis_web_first_app/header46.html', operons_dict)
 def header47(request, min, max):
 	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
+	#--try to match operons and phylums tbd
+	genes = EcisDataBase.objects.filter(operon_ID__in=opids.values_list('operon_ID',flat=True))
+	phyls = Species.objects.filter(genome_ID_x__in = genes.values_list('genome_ID_x',flat=True))
+	#operons_phylums_dict = zip(genes.operon_ID,phyls.phylum)
+	#----------------------------------
 	operons_dict = {'operons_list':opids}
+	print(operons_dict,phyls)
 	return render(request, 'ecis_web_first_app/header47.html', operons_dict)
 def pfams_det(request, gene):
 	pfams = []
@@ -233,6 +248,17 @@ def PhylumSearch(request, phylum_name):
 	page_obj = paginator.get_page(page_number)
 	return render(request, 'ecis_web_first_app/phylumsearch.html',  {"phyls_list":phyls[0],'page_obj': page_obj})
 
+def pfamsearch(request, pfam_name_id):
+	pfams = PfamDb.objects.filter(pfam_name__exact = pfam_name_id)
+	gene_values = pfams.values('gene_id')
+	genes = EcisDataBase.objects.filter(gene_id__in=gene_values)
+	opid_list =list(set(genes.values_list('operon_ID',flat=True)))
+	operons_list = Operons.objects.filter(operon_ID__in = opid_list)
+	paginator = Paginator(operons_list, 25) # Show 25 contacts per page.
+	page_number = request.GET.get('page')
+	page_obj = paginator.get_page(page_number)
+	return render(request, 'ecis_web_first_app/pfamsearch.html',  {"pfams_list":pfams[0],'page_obj': page_obj})
+
 def operonsearch(request):
 	search_term = request.GET.get('q')
 	print('search_term is ' +search_term)
@@ -244,21 +270,38 @@ def operonsearch(request):
 
 
 	return render(request, 'ecis_web_first_app/operonsearch.html', ops_dict)
+def genusearch(request):
+	search_term = request.GET.get('q')
+	print('search_term is ' +search_term)
+	try:
+		operons = Operons.objects.filter(genus__exact = search_term)
+		ops_dict = {"operon_list":operons, "sp":search_term}
+
+	except Operons.DoesNotExist:
+		ops_dict = {"operon_list":[]}
+
+
+	return render(request, 'ecis_web_first_app/genusearch.html', ops_dict)
 
 def operon_det(request, operon_id):
 	search_term = ''
 	opid = ''
 	genes = ''
 	species = ''
+	pfams = {}
 	opid = Operons.objects.get(operon_ID__exact=operon_id)
 	genes = EcisDataBase.objects.filter(operon_ID=operon_id)
 	genes_values = genes.values('genome_ID_x')
 	scaffold = genes.values('scaffold')[0]
 	scaffold['scaffold'] = scaffold['scaffold'].replace('_', ' ')
-	print (scaffold)
 	species = Species.objects.get(genome_ID_x=genes_values[0]['genome_ID_x'])
 	#print(EcisDataBase.objects.filter(genome_ID_x__exact=str(genes.values('genome_ID_x')).values('operon_ID')))
-	operon_dict = {"genes_list": genes, "species_list": species, "opid":opid, "scaffold":scaffold}
+	#gene_ids = genes.values('gene_id')
+	# for item in genes.values_list('gene_id',flat=True):
+	# 	pfams[item] =  PfamDb.objects.filter(gene_id__exact = item).values('pfam_name')
+	# print(pfams)
+	#pfams = PfamDb.objects.filter(gene_id__in=genes.values_list('gene_id',flat=True))
+	operon_dict = {"genes_list": genes, "species_list": species, "opid":opid, "scaffold":scaffold }
 	return render(request, 'ecis_web_first_app/operon_det.html', operon_dict)
 
 def cluster_det(request, cluster_id):
@@ -267,3 +310,9 @@ def cluster_det(request, cluster_id):
 	genes = EcisDataBase.objects.filter(clust40pg__exact=cluster_id)
 	clust_dict = {"genes_list_within_clust": genes, "clst40":clst}
 	return render(request, 'ecis_web_first_app/cluster_det.html', clust_dict)
+
+def core_det(request, core_whole_id):
+
+	genes = EcisDataBase.objects.filter(core_whole__exact=core_whole_id)
+	genes_dict = {"genes_list_within_core_whole_id": genes, "core":core_whole_id}
+	return render(request, 'ecis_web_first_app/core_det.html', genes_dict)

@@ -57,7 +57,10 @@ urlpatterns = [
 	path(r'^cluster_det/<str:cluster_id>/', views.cluster_det, name = 'cluster_det'),
 	path(r'^pfams_det/<str:gene>/', views.pfams_det, name = 'pfams_det'),
 	url(r'^operonsearch/', views.operonsearch, name = 'operonsearch'),
-	path(r'^phylumsearch/<str:phylum_name>/', views.PhylumSearch, name='phylumsearch')
+	url(r'^genusearch/', views.genusearch, name = 'genusearch'),
+	path(r'^phylumsearch/<str:phylum_name>/', views.PhylumSearch, name='phylumsearch'),
+	path(r'^pfamsearch/<str:pfam_name_id>/', views.pfamsearch, name='pfamsearch'),
+	path(r'^core_det/<str:core_whole_id>/', views.core_det, name = 'core_det')
 	]
 	# url(r'^2510921206/', views.pfams2510921206, name='pfams2510921206'),
 	# url(r'^2584268633/', views.pfams2584268633, name='pfams2584268633')]
