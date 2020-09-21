@@ -30,6 +30,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="/homepage">Home</a>
+        </div>
+      </div>
     </nav>
 
   	<div class="container-fluid" style="min-height:95%; ">
@@ -45,7 +47,7 @@
   		</div><hr>
       <div class="col-sm-12">
           <table class="table table-striped">
-            {% if genes_list_within_core_whole_id %}
+            {% if page_obj %}
                 <thead>
                     <tr>
                       <th scope="col">Local Operon ID</th>
@@ -55,12 +57,11 @@
                       <th scope="col">Length (aa)</th>
                       <th scope="col">Scaffold</th>
                       <th scope="col">Locus Tag</th>
-
-
                     </tr>
                 </thead>
                 <tbody>
-                  {% for entry in genes_list_within_core_whole_id %}
+
+                    {% for entry in page_obj %}
                        <tr>
                         <td><a href="{% url 'ecis_web_first_app:operon_det' operon_id=entry.operon_ID %}"> {{entry.operon_ID}} </h5></a></td>
                         <td><a href="https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=fgFindGenes&searchFilter=gene_oid_list&searchTerm={{ entry.gene_id }}&noErrorFlag=1&seqstatus=&domainfilter=&selectType=allIsolates&taxonChoice=allIsolates&data_type=&file=g.gene_oid_list128658">{{ entry.gene_id }}</a></td>
@@ -79,7 +80,26 @@
                   <p>No Records. Table Not Created.</p>
               {% endif %}
         </div>
+
+      <div class="col-sm-12">
+
+        <div class="pagination">
+          <span class="step-links">
+            {% if page_obj.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+          <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+          </span>
+
+            {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">next</a>
+              <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+        </span>
       </div>
+    </div>
     </div>
   </body>
 </html>
