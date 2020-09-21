@@ -106,8 +106,11 @@
                         <td>{{ entry.len_aa }}</td>
                         <td>{{ entry.locus_tag_x }}</td>
                         <!-- <td>{{ entry.core_whole }}</td> -->
+                        {% if entry.core_whole %}
                         <td><a href="{% url 'ecis_web_first_app:core_det' entry.core_whole %}" data-toggle="tooltip" data-placement="top" title="{{entry.core_whole}} afp homolog"> {{ entry.core_whole }} </a></td>
-
+                        {% else %}
+                        <td>{{ entry.core_whole }}</td>
+                          {% endif %} 
                         <td><a href="{% url 'ecis_web_first_app:cluster_det' entry.clust40pg %}" data-toggle="tooltip" data-placement="top" title="{{entry.gene_id}} 40% cluster info"> {{ entry.clust40pg }} </a></td>
 
                         <td>{{entry.pfams_list}} </td>
