@@ -27,7 +27,7 @@ def homepage(request):
 	#
 	# #print(opid)
 	print(set(pfams_list))
-	phylums_dict = {"phylums_list":set(phylums_list), "pfams_list":sorted(set(pfams_list))}
+	phylums_dict = {"phylums_list":sorted(set(phylums_list)), "pfams_list":sorted(set(pfams_list))}
 	return render(request, 'ecis_web_first_app/homepage.html', phylums_dict)
 def header0(request, min, max):
 	opids = Operons.objects.filter(index_ID__gte=min, index_ID__lte=max)
@@ -258,7 +258,13 @@ def pfamsearch(request, pfam_name_id):
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
 	return render(request, 'ecis_web_first_app/pfamsearch.html',  {"pfams_list":pfams[0],'page_obj': page_obj})
-
+def core_det(request, core_whole_id):
+	genes = EcisDataBase.objects.filter(core_whole__exact=core_whole_id)
+	paginator = Paginator(genes, 50) # Show 25 contacts per page.
+	page_number = request.GET.get('page')
+	page_obj = paginator.get_page(page_number)
+	genes_dict = {"genes_list_within_core_whole_id": genes, "core":core_whole_id, 'page_obj': page_obj}
+	return render(request, 'ecis_web_first_app/core_det.html', genes_dict)
 def operonsearch(request):
 	search_term = request.GET.get('q')
 	print('search_term is ' +search_term)
@@ -310,9 +316,3 @@ def cluster_det(request, cluster_id):
 	genes = EcisDataBase.objects.filter(clust40pg__exact=cluster_id)
 	clust_dict = {"genes_list_within_clust": genes, "clst40":clst}
 	return render(request, 'ecis_web_first_app/cluster_det.html', clust_dict)
-
-def core_det(request, core_whole_id):
-
-	genes = EcisDataBase.objects.filter(core_whole__exact=core_whole_id)
-	genes_dict = {"genes_list_within_core_whole_id": genes, "core":core_whole_id}
-	return render(request, 'ecis_web_first_app/core_det.html', genes_dict)
