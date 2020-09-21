@@ -35,34 +35,52 @@
           </div> <!-- /.navbar-collapse -->
     </nav>
   	<div class="container-fluid" style="min-height:95%; ">
+      	<div class="row">
+          <br>
+              <hr>
+                </div>
   		<div class="row">
-  			  <div class="col-sm-12">
-  				  <br><hr>
-  				  <center>
-  				  <h3> <i>operon ID: {{ opid.operon_ID }} </i> </h3>
-            <h3> <i>genome ID: {{ species_list.genome_ID_x }} </i> </h3>
-  				  </center>
-  			  </div>
-  		</div><hr>
-      <div class="col-sm-12">
+        <br>
+            <hr>
+
+  			  <div class="col-sm-10">
+
+  				  <br>
+            <center>
+            <h5><i> {{ species_list.species }}</i>
+            {{ species_list.strain }}</h5>
+          </center><hr>
+  				  <!-- <h4> <i>operon ID: {{ opid.operon_ID }} </i> </h4> -->
+            <p> <i>genome ID: {{ species_list.genome_ID_x }} </i> </p>
+            <p> <i>Scaffold:  {{scaffold.scaffold }} </i> </p>
+
+
+
+
+
+
+
+
+
+
         <div class="card">
   			  <div class="card-body">
+
             <!-- <div class="alert alert-dark" role="alert">
                <b>operonID:</b> {{ opid.operon_ID }}
                <b>genomeID:</b> {{ species_list.genome_ID_x }}
             </div> -->
-            <div class="alert alert-primary" role="alert">
-               <i>{{ species_list.phylum }}</i>
-               <i>{{ species_list.species }} {{ species_list.strain }}</i>
-            </div>
-  				<!-- <p class="card-title"><b>operonID:</b> {{ opid.operon_ID }}    ||    <b>genomeID:</b> {{ species_list.genome_ID_x }}</p>
-  				<p class="card-text"><b>phylumName:</b> <i>{{ species_list.phylum }}</i>    ||    <b>genusName:</b> <i>{{ species_list.genus }}</i>    ||    <b>speciesName:</b> <i>{{ species_list.species }}</i>    ||    <b>strainName:</b> <i>{{ species_list.strain }}</i></p>
-  			  </div> -->
+
+
+
             <img src="{% static opid.operon_IM.url %}" class="card-img-top" style='max-height:200px;'alt="{{opid.operon_IM}}">
-            <div class="alert alert-dark" role="alert">
-               {{ scaffold.scaffold }}
-            </div>
-          </div><hr>
+            <!-- <div class="alert alert-dark" role="alert">
+                Scaffold:  {{scaffold.scaffold }}
+            </div> -->
+
+          </div>
+        </div>
+      <!-- </div> -->
 
           <table class="table table-striped">
             {% if genes_list %}
@@ -82,14 +100,17 @@
                 <tbody>
                   {% for entry in genes_list %}
                        <tr>
-                        <td><a href="https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=fgFindGenes&searchFilter=gene_oid_list&searchTerm={{ entry.gene_id }}&noErrorFlag=1&seqstatus=&domainfilter=&selectType=allIsolates&taxonChoice=allIsolates&data_type=&file=g.gene_oid_list128658" data-toggle="tooltip" data-placement="top" title="{{entry.gene_id}} IMG information">{{ entry.gene_id }}</a> </td>
+                        <td><a href="https://img.jgi.doe.gov/cgi-bin/m/main.cgi?section=FindGenes&page=fgFindGenes&searchFilter=gene_oid_list&searchTerm={{ entry.gene_id }}&noErrorFlag=1&seqstatus=&domainfilter=&selectType=allIsolates&taxonChoice=allIsolates&data_type=&file=g.gene_oid_list128658" data-toggle="tooltip" data-placement="top" title="IMG external DB">{{ entry.gene_id }}</a> </td>
                         <td>{{ entry.start_coord_x }}</td>
                         <td>{{ entry.end_coord_x }}</td>
                         <td>{{ entry.len_aa }}</td>
                         <td>{{ entry.locus_tag_x }}</td>
-                        <td>{{ entry.core_whole }}</td>
+                        <!-- <td>{{ entry.core_whole }}</td> -->
+                        <td><a href="{% url 'ecis_web_first_app:core_det' entry.core_whole %}" data-toggle="tooltip" data-placement="top" title="{{entry.core_whole}} afp homolog"> {{ entry.core_whole }} </a></td>
+
                         <td><a href="{% url 'ecis_web_first_app:cluster_det' entry.clust40pg %}" data-toggle="tooltip" data-placement="top" title="{{entry.gene_id}} 40% cluster info"> {{ entry.clust40pg }} </a></td>
-                        <td>{{ entry.gene_id }} <a href="{% url 'ecis_web_first_app:pfams_det' entry.gene_id %}" data-toggle="tooltip" data-placement="top" title="click to see pfam domains found in {{entry.gene_id}}">  pfam </a></td>
+
+                        <td>{{entry.pfams_list}} </td>
                       </tr>
                   {% endfor %}
                 </tbody>
@@ -99,6 +120,39 @@
               <p>No Records. Table Not Created.</p>
             {% endif %}
         </div>
+        <div class="col-sm-2">
+
+            <div class="row-sm-2">
+                <br>
+
+
+
+            </div>
+
+            <div class="row-sm-2">
+
+          <!-- <button class="alert alert-dark" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+               <p>Organism's Physiological and Ecological Metadata</p>
+          </button> -->
+
+          <!-- <div class="collapse" id="collapse1"> -->
+            <div class="card card-body text-grey bg-light" >
+                <h5>Organism's Physiological and Ecological Metadata</h5>
+                 Ecosystem: <i>{{ species_list.ecosystem }}</i></br>
+                 Ecosystem Category:<i> {{ species_list.ecosystem_cat }}</i></br>
+                 Ecosystem Subtype: <i> {{ species_list.ecosystem_subtype }}</i></br>
+                 Ecosystem Type: <i> {{ species_list.ecosystem_type }}</i></br>
+                 Gram Straining: <i>{{ species_list.gram_staining }}</i></br>
+                 Habitat: <i>{{ species_list.habitat }}</i></br>
+                 Host name: <i>{{ species_list.isolation }}</i></br>
+                 Metabolism: <i> {{ species_list.metabolism }}</i></br>
+                 Motility: <i>{{ species_list.motility }}</i></br>
+                 Temperature Range:<i> {{ species_list.temp_range }}</i></br>
+
+            <!-- </div> -->
+    </div>
+        </div>
+          </div>
       </div>
     </div>
   </body>
